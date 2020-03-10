@@ -5,12 +5,17 @@ class Vehicule
     public $roues;
     public $carburant;
     public $vitesse;
+    public $contenanceReservoir;
+    public $contenuReservoir;
 
-    public function __construct(int $r, string $c, int $v)
+    public function __construct(int $r, string $c, int $v, int $cr, int $ur)
     {
       $this->roues = $r;
       $this->carburant = $c;
       $this->vitesse = $v;
+      $this->contenanceReservoir = $cr;
+      $this->contenuReservoir = $ur;
+
     }
 
     public function getNbRoues(): int
@@ -38,5 +43,8 @@ class Vehicule
         $this->vitesse = $value;
     }
 
+    public function fairePlein(Pompe $pompe){
+ 
 
+    }
 }
